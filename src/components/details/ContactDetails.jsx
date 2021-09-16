@@ -8,14 +8,13 @@ function ContactDetails() {
   const { id } = useParams();
   const contactObject =
     contacts && contacts.find((contactObj) => contactObj.id === id);
-  console.log(contactObject);
   return (
     <div className="flex flex-col w-full justify-between bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
       <div className="flex flex-wrap justify-center md:items-center md:flex-col" style={{height:"100vh"}}>
         <img
           src={contactObject && contactObject.avatar}
           alt={contactObject && contactObject.first_name}
-          className="z-50 w-60 h-60 mt-40 md:mt-16 rounded-full"
+          className="z-50 w-60 h-60 mt-40 md:mt-25 rounded-full"
         />
         <div className="text-3xl font-sans font-semibold">{`${contactObject?.first_name} ${contactObject?.last_name}`}</div>
         <div className="font-lg font-sans font-semibold mt-0 md:mt-4">

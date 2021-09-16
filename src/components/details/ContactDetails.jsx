@@ -15,7 +15,7 @@ function ContactDetails() {
         <img
           src={contactObject && contactObject.avatar}
           alt={contactObject && contactObject.first_name}
-          className="z-50 w-60 h-60 mt-40 md:mt-12 rounded-full"
+          className="z-50 w-60 h-60 mt-40 md:mt-16 rounded-full"
         />
         <div className="text-3xl font-sans font-semibold">{`${contactObject?.first_name} ${contactObject?.last_name}`}</div>
         <div className="font-lg font-sans font-semibold mt-0 md:mt-4">

@@ -11,17 +11,17 @@ function ContactDetails() {
   console.log(contactObject);
   return (
     <div className="flex flex-col w-full justify-between bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
-      <div className="flex flex-wrap justify-center" style={{height:"100vh"}}>
+      <div className="flex flex-wrap justify-center md:items-center md:flex-col" style={{height:"100vh"}}>
         <img
           src={contactObject && contactObject.avatar}
           alt={contactObject && contactObject.first_name}
-          className="z-50 w-60 h-60 mt-40 rounded-full"
+          className="z-50 w-60 h-60 mt-40 md:mt-12 rounded-full"
         />
-        <div className="text-3xl font-sans font-semibold mt-0 md:mt-60">{`${contactObject?.first_name} ${contactObject?.last_name}`}</div>
-        <div className="font-lg font-sans mt-0 md:mt-60 font-semibold">
+        <div className="text-3xl font-sans font-semibold">{`${contactObject?.first_name} ${contactObject?.last_name}`}</div>
+        <div className="font-lg font-sans font-semibold mt-0 md:mt-4">
           {contactObject?.job_title}
         </div>
-        <div className="flex flex-col mt-0 md:mt-60">
+        <div className="flex flex-col mt-0 md:mt-4">
           <div className="flex gap-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"

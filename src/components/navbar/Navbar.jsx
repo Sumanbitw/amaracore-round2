@@ -1,11 +1,8 @@
-import React, { useState } from "react";
-import { useParams } from "react-router";
+import React from "react";
 import useDarkMode from "../../darkMode/darkMode";
-import Search from "../search/Search";
 import ContactInfo from "./ContactInfo";
 
 function Navbar() {
-  const { id } = useParams();
   const [colorTheme, setTheme] = useDarkMode();
 
   return (
@@ -19,23 +16,7 @@ function Navbar() {
           />
           <div className="ml-4 text-3xl font-semibold font-sans">Contacts</div>
         </div>
-        <div className="hidden md:flex gap-2 items-center relative">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 absolute mx-2 "
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
-          </svg>
-          <Search />
-        </div>
+        <div className="hidden md:flex gap-2 items-center relative"></div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-6 w-6 md:hidden"
